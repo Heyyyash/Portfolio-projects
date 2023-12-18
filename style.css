@@ -1,0 +1,206 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Mooli&family=Poppins:wght@300&family=Raleway&family=Roboto+Mono:wght@200;400&family=Roboto:wght@300;400&display=swap');
+:root{
+    --lighting-color: #0089b7;
+    --dark-color:#003d62;
+    --darker-color:#003251;
+    --secondary-color:#fff700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+html{
+    font-size: 62.5%;
+} 
+body,html{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+    color: white;
+
+}
+body{
+    font-size: 1.4vw;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2vw 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+   background-color: var(--lighting-color);
+}
+.container ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.8vw;
+
+}
+.logo{
+    font-size: 2vw;
+    font-weight: 900;
+}
+.container ul li{
+    list-style: none;
+    font-size: 1.5vw;
+    /* border-bottom: 2px solid var(--secondary-color); */
+    transition: 0.2s ease-in-out;
+}
+nav ul :hover{
+    font-size: 1.8;
+    border-bottom: 2px solid var(--secondary-color);
+    transition: 0.2s ease-in-out;
+}
+#hero{
+    background-color: var(--dark-color);
+    padding: 1vw 10vw;
+    border-bottom: 4px solid var(--lighting-color);
+    
+    
+}
+.hero_content{
+    display: grid;
+    place-items: center;
+}
+.hero_content span.hi{
+    color: #fff700;
+    font-size: 5vw;
+    font-weight: 1200;
+}
+.hero_content span.name_text{
+    font-size: 3vw;
+    font-weight: 1200;
+}
+.hero_content h2{
+    font-size: 3vw;
+    font-weight: 1200;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 5s steps(40, end),blink-caret 0.7s step-end infinite;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    } 
+}
+@keyframes blink-caret {
+    from,to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: orange;
+    }
+}
+#projects{
+    background-color:var(--darker-color);
+}
+#projects h2{
+    font-size: 3vw;
+    text-align: center;
+    /* margin-top: -5vw; */
+    padding: 2vw;
+    font-weight: 1000;
+    
+}
+#projects 
+    .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  #projects  .grid_item{
+    display: grid;
+    place-items: center;
+}
+#projects .card{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+.card :hover{
+    transform: scale(1.05);
+    transition: 1s ease-in-out;
+}
+.card :hover img{
+    transform: scale(0.5);
+    transition: 0.3s ease-in-out;
+    opacity: 0.8;
+}
+.card:hover .card_content{
+    background-color: white;
+    color: var(--dark-color);
+    transform: translateY(0px);
+    transition: 0.3s ease-in-out;
+}
+.card_content{
+    padding: 2rem;
+    position: relative;
+    top: -6.5rem;
+    margin-bottom: -6.5rem;
+    transition: 0.5s ease-in-out;
+    transform: translateY(100px);
+}
+.card_content h3{
+    text-align: center;
+}
+
+#contact {
+    background-color: var(--dark-color);
+    padding: 3vw 2vw;
+}
+#contact h2{
+    font-size: 6vw;
+    text-align: center;
+    margin: 2vw 0;
+}
+#contact .container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+   
+}
+#contact .top_contact{
+    display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+     gap: 2vw;
+     font-size: 2vw;
+     font-weight: bolder;
+}
+#contact .bottom_contact{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+    font-size: 2vw;
+    font-weight: bolder;
+    text-align: center;
+}
+footer .footer {
+    padding: 2vw;
+    background-color: var(--darker-color);
+    font-size: 1.4vw;
+    text-align: center;
+}
